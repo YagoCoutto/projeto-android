@@ -1,0 +1,204 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@font-face {
+    font-family: 'droid';
+    src: url('../fontes/idroid.otf') format('opentype');
+    font-weight: normal;
+    }
+/* #096B28
+    #5AEE89
+    #13EB57
+    #5E7465
+    #0FB844
+    */
+
+    /*Reset/configuraçoes globais*/
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+    /*Pseudo class - configurações globais */ 
+:root{
+    --cor1: #F9F1D6;
+    --cor2: #DBD1BD;
+    --cor3: #F3EADE;
+    --cor4: #DBCABD;
+    --cor5: #F9E0D6;
+
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-destaque: 'Bebas Neue', cursive;
+    --fonte-android: 'droid';
+}
+
+body{
+    background-color: #f5eed7a6;
+    font-family:var(--fonte-padrao) ;
+}
+
+a.externo::after{ /*todo link externo*/
+    content: '\1F517';
+}
+
+header{
+    background-image: linear-gradient(to bottom, var(--cor1),var(--cor4));
+    min-height: 150px;
+    text-align: center;
+    padding-top: 40px;
+}
+header > h1{
+    color: black;
+    font-family: var(--fonte-destaque); 
+    margin-bottom: 20px;
+    text-shadow: 0px 6px 9px rgba(0, 0, 0, 0.315);
+    font-weight: normal;
+
+    
+}
+
+header > p{
+    font-family: var(--fonte-padrao);
+    color: black;
+    font-size: 1.2em;
+    padding-left: 10px;
+    padding-right: 10px;
+    max-width: 500px;/*precisa criar um margin auto pos virou um bloco e ira quebrar*/
+    margin: auto;
+    margin-bottom: 20px;
+    text-shadow: 0px 6px 7px rgba(0, 0, 0, 0.315);
+
+
+}
+
+nav{
+    background-color: var(--cor4);
+    padding: 10px;
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.13);
+}
+
+nav > a{
+    color: black;
+    text-shadow: 0px 6px 9px rgba(0, 0, 0, 0.315);
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 3px;
+    transition-duration: 0.7s;
+}
+
+nav > a:hover{
+    background-color: var(--cor3);
+}
+main a{
+    background-color: var(--cor4);
+    border-radius: 2px;
+    color: black;
+    padding: 1px;
+}
+main a:hover{
+    background-color: #F9E0D6;
+    text-decoration: underline;
+}
+main{
+    background-color: white;
+    min-width: 300px;/*responsividade*/
+    max-width: 1000px;/*responsividade*/
+    margin: auto;/*para não crescer dms em tela cheia*/
+    margin-bottom: 30px;
+    padding: 20px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.247);
+}
+main  h1{
+    color: black;
+    font-family: var(--fonte-android);
+    padding: 6px;
+    font-weight: normal;
+}
+
+main  h2{
+    font-family: var(--fonte-android);
+    background-image: linear-gradient(to right, var(--cor3), transparent);
+    padding: 6px;
+    font-weight: normal;
+}
+main img{
+    width: 70%;/*responsividade img*/
+    margin: auto;
+    display: block;
+}
+
+main img.pequena{
+    max-width: 350px; /*imagem ta muito grande*/
+    margin: auto;
+    display: block; /*para centralizar img utilzando margin*/
+}
+
+main  p{
+    margin: 10px 0px;
+    text-indent: 30px; /*espaço na primeira linha*/
+    line-height: 1.5em; /*espaçamento entre linhas*/
+}
+main strong{
+    color: teal;
+}
+
+
+/*CENTRALIZAR VIDEO*/
+div.video{
+    background-color: var(--cor4);
+    margin: 0px -20px 30px -20px;
+    padding: 20px;
+    padding-bottom: 59%; /*RETIRAR MARCA PRETA NA LATERAL DO VIDEO*/
+    position: relative;
+}
+
+div.video > iframe{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+
+}
+
+
+aside{
+    background-color: #DBD1BD;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.253);
+}
+aside > h3{
+    padding: 10px;
+    background-color: black;
+    color: white;
+    margin: -10px -10px 0px -10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    
+}
+aside > ul{
+    list-style-type: '\2714\00A0\00A0';/*simbolo*/
+    list-style-position: inside;/*bolinha ficara p dentro*/
+    columns: 2;/*divide coluna em 2*/
+}
+
+footer{
+    text-align: center;
+    font-size: 0.8;
+    background-color: black;
+    color: white;
+    margin: 5px;
+}
+footer  a{
+    text-decoration: none;
+    color: white;
+}
+footer a:hover{
+    text-decoration: underline;
+    color: teal;
+}
